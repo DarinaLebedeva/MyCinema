@@ -1,0 +1,150 @@
+body {
+    background-color: #E6E1DD; 
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: relative;
+    width: 100%;
+}
+
+header h1 {
+    font-family: 'Monotype Corsiva', sans-serif; 
+    font-size: 2.5em; 
+    text-align: center; 
+    color: #fff; 
+    margin: 0; 
+    padding: 20px 0; 
+}
+
+h2 {
+    font-weight: bold; 
+    text-align: center; 
+}
+
+.welcome-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 20px auto; 
+    display: block; 
+}
+
+.centered-text {
+    text-align: center;
+    margin: 20px 0; 
+}
+
+
+.about-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.about-image {
+    width: 80%; 
+    max-width: 400px;
+    height: auto; 
+    margin: 0 auto; 
+}
+
+
+.about-text {
+    padding: 10px; 
+    text-align: center; 
+}
+
+@media (max-width: 600px) {
+    .about-content {
+        padding: 10px; 
+    }
+}
+
+.w3-container {
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 20px;
+}
+
+.movie-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.movie-item {
+    position: relative;
+    width: calc(33.33% - 20px); /* 3 изображения в строке с отступами */
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.movie-image {
+    width: 100%; /* Полная ширина контейнера */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.movie-item:hover .movie-image {
+    transform: scale(1.1); /* Увеличение изображения при наведении */
+}
+
+.movie-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.movie-item:hover .movie-description {
+    opacity: 1; /* Показ описания при наведении */
+}
+
+@media (max-width: 768px) {
+    .movie-item {
+        width: calc(50% - 10px); /* 2 изображения в строке на мобильных устройствах */
+    }
+
+    .movie-description {
+        font-size: 14px; /* Уменьшение размера шрифта для описания */
+    }
+
+    .movie-image {
+        height: auto; /* Сохраняем пропорции изображения */
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-item {
+        width: 100%; /* 1 изображение в строке на маленьких экранах */
+    }
+
+    .movie-description {
+        font-size: 12px; /* Дополнительное уменьшение размера шрифта для описания */
+    }
+}
+
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+}
+
+.w3-modal-content {
+    padding: 20px;
+}
+
